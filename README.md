@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.png" alt="AI Productivity Automation Suite Banner" width="100%">
+</p>
+
 # 🤖 AI Productivity Automation Suite
 
 An AI-powered collection of Telegram bots built with **n8n**, **Large Language Models (LLMs)**, **Telegram Bot API**, and **Google Sheets** to automate daily productivity tasks.
