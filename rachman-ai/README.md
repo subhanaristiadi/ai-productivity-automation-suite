@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="screenshots/cover.png" width="100%">
+  <img src="assets/rachman-ai-banner.png" width="100%">
 </p>
 
 <div align="center">
