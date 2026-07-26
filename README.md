@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="rachman-ai-banner.png" width="100%" alt="RACHMAN AI Banner">
+  <img src="assets/banner" width="100%" alt="AI Productivity Automation Suite">
 </p>
 
 # 🤖 AI Productivity Automation Suite
