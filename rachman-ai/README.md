@@ -46,6 +46,29 @@ This project demonstrates how workflow automation, multimodal AI, and modern Lar
 
 ---
 
+# 🔄 Workflow Overview
+
+The following workflow powers the entire RACHMAN AI assistant.
+
+It automatically routes different message types (text, images, PDFs, and voice messages) through specialized AI pipelines before sending the response back to Telegram.
+
+<p align="center">
+  <img src="assets/workflow" width="100%" alt="RACHMAN AI Workflow">
+</p>
+
+### Workflow Highlights
+
+- 🤖 Automatic message routing
+- 💬 AI Chat processing
+- 🖼 Image understanding
+- 📄 PDF extraction and analysis
+- 🎤 Voice transcription using Whisper
+- 🧠 Conversation memory
+- 📝 Google Docs logging
+- 📲 Telegram response delivery
+
+---
+
 # 🎬 Demo
 
 ## 💬 AI Chat
