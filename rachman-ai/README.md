@@ -53,7 +53,7 @@ The following workflow powers the entire RACHMAN AI assistant.
 It automatically routes different message types (text, images, PDFs, and voice messages) through specialized AI pipelines before sending the response back to Telegram.
 
 <p align="center">
-  <img src="assets/workflow" width="100%" alt="RACHMAN AI Workflow">
+  <img src="workflow/workflow" width="100%" alt="RACHMAN AI Workflow">
 </p>
 
 ### Workflow Highlights
