@@ -1,0 +1,353 @@
+# PART 1 — Introduction
+
+# RACHMAN AI v1.0
+
+**AI-powered Multimodal Telegram Assistant built with n8n Workflow Automation & Large Language Models**
+
+---
+
+## Overview
+
+**RACHMAN AI** adalah asisten AI pribadi berbasis Telegram yang dibangun menggunakan **n8n**, **Large Language Models (LLMs)**, dan berbagai layanan cloud untuk membantu aktivitas sehari-hari secara otomatis.
+
+Berbeda dengan chatbot Telegram biasa, RACHMAN AI mampu memahami berbagai jenis input, termasuk:
+
+* Teks
+* Gambar
+* Dokumen PDF
+* Voice note
+
+Seluruh proses dilakukan secara otomatis melalui workflow n8n tanpa memerlukan aplikasi tambahan.
+
+Pengguna cukup mengirim pesan melalui Telegram, kemudian AI akan menganalisis isi pesan, memberikan jawaban, dan apabila diperlukan menyimpan hasilnya ke layanan Google.
+
+---
+
+# Tujuan Proyek
+
+RACHMAN AI dibuat untuk membangun sebuah asisten AI pribadi yang dapat digunakan dalam berbagai kebutuhan, seperti:
+
+* Menjawab pertanyaan umum
+* Membantu pekerjaan sehari-hari
+* Menganalisis gambar
+* Membaca dokumen PDF
+* Memahami voice note
+* Membantu pemrograman
+* Membantu penelitian
+* Membantu penulisan
+* Membantu produktivitas
+* Menjadi pusat otomasi Telegram pribadi
+
+Semua kemampuan tersebut berjalan di dalam satu workflow yang terintegrasi.
+
+---
+
+# Fitur Utama
+
+Versi **v1.0** memiliki kemampuan berikut.
+
+| Feature                       | Status |
+| ----------------------------- | :----: |
+| AI Chat Assistant             |    ✅   |
+| Telegram Bot                  |    ✅   |
+| Conversation Memory           |    ✅   |
+| Image Analysis                |    ✅   |
+| OCR (Extract Text from Image) |    ✅   |
+| PDF Analysis                  |    ✅   |
+| Voice Note Transcription      |    ✅   |
+| AI Document Summarization     |    ✅   |
+| Google Docs Logging           |    ✅   |
+| Workflow Automation           |    ✅   |
+| Multi-format Input            |    ✅   |
+| Multilingual Response         |    ✅   |
+
+---
+
+# Kemampuan AI
+
+RACHMAN AI mampu memahami berbagai jenis pertanyaan.
+
+Contoh.
+
+### General Question
+
+```
+Apa itu Machine Learning?
+```
+
+---
+
+### Programming
+
+```
+Perbaiki error Python ini.
+```
+
+---
+
+### Data Analysis
+
+```
+Analisis dataset ini.
+```
+
+---
+
+### Research
+
+```
+Ringkas jurnal berikut.
+```
+
+---
+
+### Writing
+
+```
+Buatkan email profesional.
+```
+
+---
+
+### Productivity
+
+```
+Susun rencana belajar SQL selama 30 hari.
+```
+
+---
+
+### Translation
+
+```
+Translate this paragraph into English.
+```
+
+---
+
+# Kemampuan Multimodal
+
+Selain teks, bot juga memahami berbagai jenis media.
+
+## Image
+
+Pengguna dapat mengirimkan:
+
+* Screenshot
+* Foto
+* Diagram
+* Grafik
+* Flowchart
+* UI aplikasi
+* Kode program
+* Dokumen hasil scan
+
+AI akan menganalisis isi gambar sesuai permintaan pengguna.
+
+---
+
+## PDF
+
+Bot dapat membaca dokumen PDF seperti:
+
+* Laporan
+* Proposal
+* Makalah
+* Jurnal
+* SOP
+* Modul pelatihan
+* Dokumen resmi
+
+Pengguna dapat meminta:
+
+* Ringkasan
+* Analisis
+* Tanya jawab berdasarkan isi dokumen
+* Penjelasan bagian tertentu
+
+---
+
+## Voice Note
+
+Bot mendukung voice note Telegram.
+
+Voice akan:
+
+1. Ditranskripsi menjadi teks.
+2. Dipahami oleh AI.
+3. Dijawab secara otomatis.
+
+Pengguna dapat berbicara secara natural tanpa harus mengetik.
+
+---
+
+# Arsitektur Sistem
+
+RACHMAN AI dibangun menggunakan pendekatan workflow automation.
+
+Alur kerjanya secara umum adalah:
+
+```text
+Telegram User
+       │
+       ▼
+Telegram Bot
+       │
+       ▼
+Telegram Trigger
+       │
+       ▼
+Switch Router
+       │
+ ┌─────┼─────┬─────┐
+ │     │     │     │
+Text Image PDF Voice
+ │     │     │     │
+ ▼     ▼     ▼     ▼
+ AI  Vision PDF Whisper
+ │     │     │     │
+ └─────┴─────┴─────┘
+       │
+       ▼
+Memory
+       │
+       ▼
+Google Docs
+       │
+       ▼
+Telegram Reply
+```
+
+Setiap jenis input diproses oleh jalur workflow yang berbeda sehingga bot dapat memberikan respons yang sesuai.
+
+---
+
+# Teknologi yang Digunakan
+
+| Teknologi               | Fungsi                          |
+| ----------------------- | ------------------------------- |
+| Telegram Bot API        | Menerima dan mengirim pesan     |
+| n8n                     | Workflow Automation Engine      |
+| Docker Desktop          | Menjalankan n8n secara lokal    |
+| ngrok                   | HTTPS Tunnel untuk Webhook      |
+| Bynara AI Router        | AI Gateway                      |
+| OpenAI Chat Model (n8n) | AI Language Model Node          |
+| Mistral Medium 3.5      | Large Language Model            |
+| GPT Vision              | Analisis gambar                 |
+| Whisper Large v3 Turbo  | Transkripsi voice note          |
+| Google Docs             | Penyimpanan riwayat percakapan  |
+| Google Cloud            | OAuth dan Credential Management |
+
+---
+
+# Siapa yang Cocok Menggunakan RACHMAN AI?
+
+RACHMAN AI dirancang untuk berbagai kalangan.
+
+* Software Developer
+* Data Analyst
+* Data Scientist
+* AI Engineer
+* Automation Engineer
+* Mahasiswa
+* Dosen
+* Peneliti
+* ASN
+* CPNS
+* Freelancer
+* Content Creator
+* UMKM
+* Profesional
+* Siapa saja yang ingin memiliki AI Assistant pribadi.
+
+---
+
+# Keunggulan RACHMAN AI
+
+Dibandingkan chatbot Telegram sederhana, RACHMAN AI memiliki beberapa keunggulan.
+
+* Mendukung berbagai jenis input.
+* Memiliki memori percakapan.
+* Menggunakan workflow modular sehingga mudah dikembangkan.
+* Mudah mengganti AI provider tanpa mengubah keseluruhan workflow.
+* Seluruh workflow dibuat menggunakan n8n sehingga bersifat visual dan mudah dipelajari.
+* Seluruh percakapan dapat didokumentasikan secara otomatis ke Google Docs.
+* Mendukung integrasi dengan berbagai layanan cloud.
+
+---
+
+# Yang Akan Dipelajari
+
+Melalui dokumentasi ini Anda akan mempelajari:
+
+* Cara membangun Telegram Bot dari awal.
+* Cara menginstal n8n menggunakan Docker.
+* Cara menghubungkan Telegram dengan n8n.
+* Cara mengonfigurasi Bynara AI Router.
+* Cara menggunakan OpenAI Chat Model di n8n.
+* Cara membangun AI Agent.
+* Cara menggunakan Memory.
+* Cara menganalisis gambar.
+* Cara membaca PDF.
+* Cara mentranskripsi voice note.
+* Cara menyimpan hasil ke Google Docs.
+* Cara melakukan troubleshooting workflow.
+* Cara melakukan backup dan restore workflow.
+
+---
+
+# Estimasi Waktu
+
+| Tahapan                 |    Estimasi |
+| ----------------------- | ----------: |
+| Persiapan lingkungan    |    30 menit |
+| Setup Telegram          |    15 menit |
+| Setup Google Cloud      |    20 menit |
+| Setup Bynara            |    10 menit |
+| Instalasi n8n           |    20 menit |
+| Import Workflow         |    10 menit |
+| Konfigurasi AI          |    20 menit |
+| Pengujian seluruh fitur | 30–45 menit |
+
+Total waktu sekitar **2–3 jam** bagi pengguna yang belum pernah menggunakan n8n.
+
+---
+
+# Prasyarat
+
+Sebelum memulai tutorial ini, pastikan Anda telah memiliki:
+
+### Hardware
+
+* Windows 10 atau Windows 11
+* RAM minimal 8 GB
+* Koneksi internet stabil
+
+### Software
+
+* Docker Desktop
+* Telegram
+* Google Chrome
+* PowerShell
+
+### Akun
+
+* Google Account
+* Telegram Account
+* Bynara Account
+
+---
+
+# Dokumentasi Ini
+
+Dokumentasi ini disusun secara bertahap.
+
+Setiap bagian dapat diikuti secara berurutan sehingga pengguna yang belum pernah menggunakan n8n sekalipun dapat membangun RACHMAN AI dari nol hingga siap digunakan.
+
+Seluruh contoh konfigurasi, workflow, dan pengujian menggunakan versi **RACHMAN AI v1.0**.
+
+---
+
+# Lanjut ke PART 2
+
+Pada bagian berikutnya kita akan mempelajari **System Architecture**, yaitu penjelasan mendalam mengenai desain workflow, alur data, fungsi setiap komponen, serta bagaimana seluruh layanan saling terhubung membentuk RACHMAN AI.
