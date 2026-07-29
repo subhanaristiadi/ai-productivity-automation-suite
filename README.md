@@ -1,263 +1,179 @@
 <p align="center">
-  <img src="assets/banner2" width="100%" alt="AI Productivity Automation Suite">
+  <img src="assets/banner2.png" width="100%" alt="AI Productivity Automation Suite">
 </p>
 
-# 🤖 AI Productivity Automation Suite
+# 🤖 AI Automation Portfolio
 
-### Build smarter workflows with AI-powered Telegram Bots
+A collection of AI-powered automation projects built with **n8n**, **Telegram Bot API**, and modern Large Language Models (LLMs).
 
-AI-powered automation platform built with **n8n**, **Large Language Models**, **Telegram Bot API**, and **Google Workspace**.
-
-![License](https://img.shields.io/badge/License-MIT-success)
-![n8n](https://img.shields.io/badge/n8n-Workflow%20Automation-EA4B71)
-![Telegram](https://img.shields.io/badge/Telegram-Bot%20API-26A5E4)
-![OpenAI Compatible](https://img.shields.io/badge/OpenAI-Compatible-412991)
-![Docker](https://img.shields.io/badge/Docker-2496ED)
-![Google Workspace](https://img.shields.io/badge/Google-Workspace-34A853)
-
-</div>
+These projects demonstrate how AI can automate daily workflows, extract structured information, understand documents and images, and integrate seamlessly with productivity tools.
 
 ---
 
-# 🚀 Overview
+# 🚀 Featured Projects
 
-AI Productivity Automation Suite is a collection of AI-powered automation workflows that transform natural language into structured actions.
+## 🤖 RACHMAN AI
 
-Built with **n8n**, **Telegram**, and **Large Language Models**, this project demonstrates practical AI integration for productivity, automation, document analysis, and personal knowledge management.
+An intelligent multi-modal Telegram assistant designed to handle everyday productivity tasks.
 
-Rather than creating standalone chatbots, every workflow solves a real-world problem through automation.
+### Features
 
----
+* 💬 General AI conversation
+* 🖼️ Image understanding
+* 📄 PDF analysis
+* 🎤 Voice transcription
+* 🧠 Conversation memory
+* 📚 Google Docs logging
+* 🤖 Telegram interface
+* ⚡ Automated workflows with n8n
 
-# ✨ Projects
+### AI Stack
 
-## 🏦 Finance Bot
-
-AI-powered personal finance assistant.
-
-**Features**
-
-- Record income
-- Record expenses
-- Automatic categorization
-- Google Sheets integration
-- Natural language input
-
-Example
-
-```
-Bought coffee 25k
-```
+| Component      | Provider      |
+| -------------- | ------------- |
+| General Chat   | Agnes AI      |
+| PDF Analysis   | Agnes AI      |
+| Image Analysis | Google Gemini |
+| Speech-to-Text | Groq Whisper  |
 
 ---
 
-## 📅 Daily Activity Bot
+## 💰 Finance Tracker Bot
 
-Automatically logs daily work activities.
+A Telegram bot that automatically records income and expenses using natural language.
 
-**Features**
+### Features
 
-- Activity logging
-- Date extraction
-- Time extraction
-- Google Sheets integration
+* Automatic information extraction
+* Income & expense tracking
+* Financial categorization
+* Google Sheets integration
+* Natural language input
+* Instant Telegram confirmation
 
-Example
+### Example
 
-```
-Meeting with HR today 09:00-11:00
-```
+> "Bought lunch for Rp35.000"
+
+Automatically becomes:
+
+* Date
+* Amount
+* Category
+* Transaction Type
+* Description
 
 ---
 
 ## 📚 English Vocabulary Bot
 
-Personal vocabulary collector.
-
-**Features**
-
-- Save difficult words
-- Indonesian translation
-- Example sentence
-- Google Sheets storage
-
-Example
-
-```
-ubiquitous
-```
-
----
-
-## 🤖 RACHMAN AI
-
-A multimodal AI assistant built with n8n and LLMs.
+A personal vocabulary assistant that builds an English learning database through Telegram.
 
 ### Features
 
-- 💬 AI Chat
-- 🖼 Image Analysis
-- 📄 PDF Analysis
-- 🎤 Voice Transcription
-- 🧠 Conversation Memory
-- 📝 Google Docs Logging
-- 🌐 Multi-language Support
-- 🤖 OpenAI Compatible Models
-
-Example requests
-
-```
-Summarize this PDF.
-
-Explain this image.
-
-Transcribe this voice note.
-
-Help me write Python code.
-
-Analyze this workflow.
-```
+* Save new vocabulary
+* Indonesian translation
+* Example sentence generation
+* Google Sheets storage
+* Personal vocabulary database
+* Quick retrieval
 
 ---
 
-# 🏗 Architecture
+# 🛠️ Technology Stack
+
+### Workflow Automation
+
+* n8n
+* Docker
+
+### AI Models
+
+* Agnes AI
+* Google Gemini
+* Groq Whisper
+
+### Integrations
+
+* Telegram Bot API
+* Google Sheets
+* Google Docs
+
+---
+
+# 🧩 Architecture
 
 ```
-Telegram User
-      │
-      ▼
-Telegram Trigger
-      │
-      ▼
+Telegram
+    │
+    ▼
 n8n Workflow
-      │
-      ▼
-Information Extraction
-      │
-      ▼
-Large Language Model
-(Bynara / Groq / OpenAI Compatible)
-      │
-      ▼
-Google Workspace
-│
-├── Google Sheets
-└── Google Docs
-      │
-      ▼
-Telegram Response
+    │
+    ├── Agnes AI
+    │      ├── General Chat
+    │      └── PDF Analysis
+    │
+    ├── Google Gemini
+    │      └── Image Analysis
+    │
+    ├── Groq Whisper
+    │      └── Speech-to-Text
+    │
+    ├── Google Sheets
+    │
+    └── Google Docs
 ```
 
 ---
 
-# 🛠 Tech Stack
+# 🎯 Project Goals
 
-| Category | Technology |
-|------------|----------------|
-| Workflow | n8n |
-| AI Models | Mistral, GPT, Qwen |
-| AI Providers | Bynara, Groq |
-| Messaging | Telegram Bot API |
-| Database | Google Sheets |
-| Documents | Google Docs |
-| Speech-to-Text | Whisper |
-| Vision | GPT Vision |
-| Container | Docker |
-| API | OpenAI Compatible |
+* Build practical AI assistants for everyday productivity.
+* Explore multi-modal AI automation.
+* Integrate LLMs into real-world workflows.
+* Showcase scalable n8n automation architectures.
+* Create reusable AI workflow templates.
 
 ---
 
 # 📂 Repository Structure
 
 ```
-ai-productivity-automation-suite/
-
-assets/
-
-finance-bot/
-    workflow/
-    tutorial/
-    screenshots/
-    README.md
-
-daily-activity-bot/
-    workflow/
-    tutorial/
-    screenshots/
-    README.md
-
-english-vocabulary-bot/
-    workflow/
-    tutorial/
-    screenshots/
-    README.md
-
-rachman-ai/
-    workflow/
-    tutorial/
-    screenshots/
-    README.md
-
-README.md
-
-LICENSE
+AI-Automation-Portfolio/
+│
+├── 01-RACHMAN-AI/
+│
+├── 02-Telegram-Finance-Bot/
+│
+├── 03-English-Vocabulary-Bot/
+│
+└── README.md
 ```
 
 ---
 
-# 🎯 Highlights
+# 📸 Preview
 
-- AI Workflow Automation
-- Telegram Integration
-- Prompt Engineering
-- Multimodal AI
-- Image Understanding
-- Voice Processing
-- PDF Analysis
-- Google Workspace Automation
-- OpenAI-Compatible APIs
-- Production-ready n8n Workflows
+Each project includes:
+
+* Workflow architecture
+* n8n workflow JSON
+* Setup guide
+* Screenshots
+* Feature overview
+* Example conversations
 
 ---
 
-# 📸 Screenshots
+# 📄 License
 
-| Finance | Daily Activity |
-|----------|----------------|
-| Coming Soon | Coming Soon |
-
-| Vocabulary | RACHMAN AI |
-|------------|------------|
-| Coming Soon | Coming Soon |
+This repository is released under the MIT License.
 
 ---
 
-# 🛣 Roadmap
+## ⭐ About
 
-- OCR Receipt Scanner
-- AI Monthly Reports
-- PostgreSQL Support
-- Dashboard
-- RAG Knowledge Base
-- Calendar Integration
-- Multi-user Authentication
-- Cloud Deployment
-
----
-
-# 👨‍💻 Author
-
-**Subhan Aristiadi Rachman**
-
-Data Analyst • AI Automation Developer
-
-GitHub
-
-https://github.com/subhanaristiadi
-
-LinkedIn
-
-(coming soon)
+This portfolio demonstrates practical applications of AI automation using modern LLMs, workflow orchestration, and messaging platforms to solve real-world productivity challenges.
 
 ---
 
