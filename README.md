@@ -4,9 +4,9 @@
 
 # 🤖 AI Automation Portfolio
 
-A collection of AI-powered automation projects built with **n8n**, **Telegram Bot API**, and modern Large Language Models (LLMs).
+A collection of AI-powered automation projects built with **n8n**, **Telegram Bot API**, **Docker**, **Google Workspace**, and modern **Large Language Models (LLMs)**.
 
-These projects demonstrate how AI can automate daily workflows, extract structured information, understand documents and images, and integrate seamlessly with productivity tools.
+This repository showcases practical AI automation solutions that transform natural language into structured workflows, automate repetitive tasks, and integrate seamlessly with Google Workspace for personal productivity.
 
 ---
 
@@ -14,42 +14,103 @@ These projects demonstrate how AI can automate daily workflows, extract structur
 
 ## 🤖 RACHMAN AI
 
-An intelligent multi-modal Telegram assistant designed to handle everyday productivity tasks.
+A multi-modal Telegram AI assistant capable of understanding text, images, PDF documents, and voice messages through intelligent workflow automation.
 
 ### Features
 
-* 💬 General AI conversation
-* 🖼️ Image understanding
-* 📄 PDF analysis
+* 💬 AI-powered conversations
+* 🖼️ Image analysis
+* 📄 PDF document understanding
 * 🎤 Voice transcription
 * 🧠 Conversation memory
-* 📚 Google Docs logging
+* 📚 Google Docs conversation logging
 * 🤖 Telegram interface
-* ⚡ Automated workflows with n8n
+* ⚡ Automated workflow orchestration with n8n
+
+### AI Workflow
+
+```text
+Telegram
+    │
+    ▼
+Message Router
+    │
+    ├── 💬 Text Chat
+    │      ├── AI Agent
+    │      ├── Conversation Memory
+    │      └── Google Docs Log
+    │
+    ├── 🖼️ Image Analysis
+    │      ├── Vision Model
+    │      └── Google Docs Log
+    │
+    ├── 📄 PDF Analysis
+    │      ├── PDF Parser
+    │      ├── AI Agent
+    │      └── Google Docs Log
+    │
+    └── 🎤 Voice Message
+           ├── Speech-to-Text
+           ├── AI Agent
+           └── Google Docs Log
+
+                │
+                ▼
+
+          Telegram Reply
+```
 
 ### AI Stack
 
-| Component      | Provider      |
-| -------------- | ------------- |
-| General Chat   | Agnes AI      |
-| PDF Analysis   | Agnes AI      |
-| Image Analysis | Google Gemini |
-| Speech-to-Text | Groq Whisper  |
+| Component           | Technology            |
+| ------------------- | --------------------- |
+| Workflow Engine     | n8n                   |
+| AI Agent            | OpenAI-Compatible LLM |
+| Image Understanding | Vision Model          |
+| PDF Processing      | PDF Parser + LLM      |
+| Speech-to-Text      | Groq Whisper          |
+| Memory              | Buffer Memory         |
+| Knowledge Log       | Google Docs           |
+| Messaging           | Telegram Bot API      |
 
 ---
 
 ## 💰 Finance Tracker Bot
 
-A Telegram bot that automatically records income and expenses using natural language.
+A Telegram bot that automatically records income and expenses using natural language processing and structured information extraction.
 
 ### Features
 
-* Automatic information extraction
-* Income & expense tracking
-* Financial categorization
-* Google Sheets integration
-* Natural language input
-* Instant Telegram confirmation
+* 💵 Income & expense tracking
+* 🧾 Automatic information extraction
+* 🏷️ Smart transaction categorization
+* 📊 Google Sheets integration
+* 💬 Natural language input
+* ✅ Instant Telegram confirmation
+
+### Workflow
+
+```text
+Telegram
+    │
+    ▼
+Telegram Trigger
+    │
+    ▼
+Information Extractor
+    │
+    ▼
+AI Language Model
+    │
+    ▼
+Structured JSON
+    │
+    ▼
+Google Sheets
+    │
+    ▼
+Telegram Reply
+```
 
 ### Example
 
@@ -57,26 +118,62 @@ A Telegram bot that automatically records income and expenses using natural lang
 
 Automatically becomes:
 
-* Date
+* Date & Time
+* Transaction Type
 * Amount
 * Category
-* Transaction Type
 * Description
 
 ---
 
 ## 📚 English Vocabulary Bot
 
-A personal vocabulary assistant that builds an English learning database through Telegram.
+A personal English learning assistant that automatically builds a structured vocabulary database from Telegram conversations.
 
 ### Features
 
-* Save new vocabulary
-* Indonesian translation
-* Example sentence generation
-* Google Sheets storage
-* Personal vocabulary database
-* Quick retrieval
+* 📖 Save new vocabulary
+* 🌐 Indonesian translation
+* ✍️ Example sentence generation
+* 📊 Google Sheets integration
+* 📚 Personal vocabulary database
+* 🔎 Fast vocabulary lookup
+
+### Workflow
+
+```text
+Telegram
+    │
+    ▼
+Telegram Trigger
+    │
+    ▼
+Information Extractor
+    │
+    ▼
+AI Language Model
+    │
+    ▼
+Structured Vocabulary
+    │
+    ▼
+Google Sheets
+    │
+    ▼
+Telegram Reply
+```
+
+### Example
+
+> "Serendipity"
+
+Automatically becomes:
+
+* Word
+* Part of Speech
+* Indonesian Translation
+* Example Sentence
+* Date Added
 
 ---
 
@@ -87,65 +184,104 @@ A personal vocabulary assistant that builds an English learning database through
 * n8n
 * Docker
 
-### AI Models
+### Artificial Intelligence
 
-* Agnes AI
-* Google Gemini
+* OpenAI-Compatible LLMs
+* Vision Models
 * Groq Whisper
 
-### Integrations
+### Messaging
 
 * Telegram Bot API
+
+### Google Workspace
+
 * Google Sheets
 * Google Docs
 
+### Data Processing
+
+* Information Extractor
+* Structured JSON Parsing
+* PDF Processing
+
 ---
 
-# 🧩 Architecture
+# 🧩 System Architecture
 
-```
-Telegram
-    │
-    ▼
-n8n Workflow
-    │
-    ├── Agnes AI
-    │      ├── General Chat
-    │      └── PDF Analysis
-    │
-    ├── Google Gemini
-    │      └── Image Analysis
-    │
-    ├── Groq Whisper
-    │      └── Speech-to-Text
-    │
-    ├── Google Sheets
-    │
-    └── Google Docs
+```text
+                              Telegram Users
+                                     │
+                                     ▼
+                           Telegram Bot API
+                                     │
+                                     ▼
+                           Docker + n8n Engine
+                                     │
+        ┌────────────────────────────┼────────────────────────────┐
+        │                            │                            │
+        ▼                            ▼                            ▼
+
+   🤖 RACHMAN AI             💰 Finance Tracker         📚 Vocabulary Bot
+
+        │                            │                            │
+
+   Multi-modal Router       Information Extractor     Information Extractor
+
+        │                            │                            │
+
+Text • Image • PDF • Voice     AI Language Model        AI Language Model
+
+        │                            │                            │
+
+ AI Processing Layer          Structured JSON         Structured Vocabulary
+
+        │                            │                            │
+
+ Memory • Google Docs         Google Sheets           Google Sheets
+
+        │                            │                            │
+
+        └─────────────── Telegram Response ───────────────────────┘
 ```
 
 ---
 
 # 🎯 Project Goals
 
-* Build practical AI assistants for everyday productivity.
-* Explore multi-modal AI automation.
-* Integrate LLMs into real-world workflows.
-* Showcase scalable n8n automation architectures.
-* Create reusable AI workflow templates.
+* Build production-ready AI assistants for personal productivity.
+* Demonstrate practical AI workflow automation with n8n.
+* Convert natural language into structured business data.
+* Integrate modern LLMs with Telegram and Google Workspace.
+* Showcase scalable automation architecture for real-world use cases.
+* Create reusable AI workflow templates for future automation projects.
 
 ---
 
 # 📂 Repository Structure
 
-```
+```text
 AI-Automation-Portfolio/
 │
 ├── 01-RACHMAN-AI/
+│   ├── workflow/
+│   ├── screenshots/
+│   ├── docs/
+│   └── README.md
 │
 ├── 02-Telegram-Finance-Bot/
+│   ├── workflow/
+│   ├── screenshots/
+│   ├── docs/
+│   └── README.md
 │
 ├── 03-English-Vocabulary-Bot/
+│   ├── workflow/
+│   ├── screenshots/
+│   ├── docs/
+│   └── README.md
+│
+├── assets/
 │
 └── README.md
 ```
@@ -156,26 +292,27 @@ AI-Automation-Portfolio/
 
 Each project includes:
 
-* Workflow architecture
-* n8n workflow JSON
-* Setup guide
-* Screenshots
-* Feature overview
-* Example conversations
+* 📐 Workflow architecture diagrams
+* ⚙️ Complete n8n workflow JSON
+* 📖 Step-by-step setup guide
+* 📷 Screenshots
+* ✨ Feature overview
+* 💬 Example conversations
+* 📝 Documentation
 
 ---
 
 # 📄 License
 
-This repository is released under the MIT License.
+This repository is released under the **MIT License**.
 
 ---
 
 ## ⭐ About
 
-This portfolio demonstrates practical applications of AI automation using modern LLMs, workflow orchestration, and messaging platforms to solve real-world productivity challenges.
+This portfolio demonstrates practical applications of AI automation using modern Large Language Models, workflow orchestration, and Telegram-based interfaces to solve real-world productivity challenges.
 
----
+The projects emphasize scalable workflow design, structured information extraction, Google Workspace integration, and production-ready AI automation built with **n8n**.
 
 # ⭐ Support
 
