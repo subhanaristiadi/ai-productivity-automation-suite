@@ -1,3 +1,0 @@
-# English Vocabulary Bot
-
-Coming soon...
