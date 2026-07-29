@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner1" width="100%" alt="AI Productivity Automation Suite">
+  <img src="assets/banner2" width="100%" alt="AI Productivity Automation Suite">
 </p>
 
 # 🤖 AI Productivity Automation Suite
