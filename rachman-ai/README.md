@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner3.png" width="100%" alt="AI Productivity Automation Suite">
+</p>
+
 # 🤖 RACHMAN AI
 
 > An AI-powered multimodal Telegram assistant built with **n8n Workflow Automation**, **Docker**, **Telegram Bot API**, and modern **Large Language Models (LLMs)**.
