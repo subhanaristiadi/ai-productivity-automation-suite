@@ -1,320 +1,347 @@
-<p align="center">
-  <img src="assets/rachman-ai-banner" alt="Rachman AI" width="100%">
-</p>
-
-
 # 🤖 RACHMAN AI
 
-### AI-powered Multimodal Telegram Assistant built with n8n Workflow Automation & Large Language Models
+> An AI-powered multimodal Telegram assistant built with **n8n Workflow Automation**, **Docker**, **Telegram Bot API**, and modern **Large Language Models (LLMs)**.
 
-A production-ready AI assistant that understands **text**, **images**, **PDF documents**, and **voice messages**, powered by modern LLMs and automated entirely through **n8n**.
-
-![Workflow](https://img.shields.io/badge/n8n-Automation-EA4B71)
-![Telegram](https://img.shields.io/badge/Telegram-Bot%20API-26A5E4)
-![LLM](https://img.shields.io/badge/LLM-OpenAI%20Compatible-412991)
-![Docker](https://img.shields.io/badge/Docker-2496ED)
-![License](https://img.shields.io/badge/License-MIT-success)
-
-</div>
-
----
-
-# 📖 Overview
-
-RACHMAN AI is a personal AI assistant that runs entirely inside Telegram.
-
-Instead of functioning as a simple chatbot, it intelligently routes different input types through dedicated automation workflows built with n8n.
-
-Whether the user sends a text message, uploads a PDF, shares an image, or records a voice note, RACHMAN AI automatically processes the request using the appropriate AI pipeline before delivering the response back to Telegram.
-
-This project demonstrates how workflow automation, multimodal AI, and modern Large Language Models can be combined into a practical productivity assistant.
+RACHMAN AI is a personal AI assistant that combines conversational AI, image understanding, PDF analysis, speech recognition, and workflow automation into a single Telegram bot. The project demonstrates how multiple AI services can be orchestrated through n8n to build a practical, production-ready assistant.
 
 ---
 
 # ✨ Features
 
-| Feature | Description | Status |
-|----------|-------------|:------:|
-| 💬 AI Chat | Natural language conversations | ✅ |
-| 🖼 Image Analysis | Understand screenshots, charts, UI, documents, and photos | ✅ |
-| 📄 PDF Analysis | Summarize, explain, translate, and answer questions from PDFs | ✅ |
-| 🎤 Voice Transcription | Speech-to-text using Whisper | ✅ |
-| 🧠 Conversation Memory | Maintain context across conversations | ✅ |
-| 📝 Google Docs Logging | Automatically archive conversations | ✅ |
-| 🌐 Multi-language Support | Indonesian & English | ✅ |
-| 🤖 OpenAI-Compatible APIs | Works with multiple LLM providers | ✅ |
+* 💬 AI-powered conversations
+* 🖼️ Image understanding
+* 📄 PDF document analysis
+* 🎤 Voice transcription
+* 🧠 Conversation memory
+* 📚 Automatic Google Docs conversation logging
+* 🤖 Telegram Bot integration
+* ⚡ Workflow automation with n8n
+* 🔀 Automatic routing based on message type
+* 📝 Context-aware responses
 
 ---
 
-# 🔄 Workflow Overview
+# 🏗️ System Architecture
 
-The following workflow powers the entire RACHMAN AI assistant.
+```text
+                        Telegram User
+                              │
+                              ▼
+                     Telegram Bot API
+                              │
+                              ▼
+                     Telegram Trigger
+                              │
+                              ▼
+                      Message Router
+                              │
+      ┌───────────────┬───────────────┬───────────────┐
+      │               │               │               │
+      ▼               ▼               ▼               ▼
 
-It automatically routes different message types (text, images, PDFs, and voice messages) through specialized AI pipelines before sending the response back to Telegram.
+   Text Chat       Image File      PDF File      Voice Note
 
-<p align="center">
-  <img src="screenshoots/clear-workflow" width="100%" alt="RACHMAN AI Workflow">
-</p>
+      │               │               │               │
 
-### Workflow Highlights
+      ▼               ▼               ▼               ▼
 
-- 🤖 Automatic message routing
-- 💬 AI Chat processing
-- 🖼 Image understanding
-- 📄 PDF extraction and analysis
-- 🎤 Voice transcription using Whisper
-- 🧠 Conversation memory
-- 📝 Google Docs logging
-- 📲 Telegram response delivery
+   AI Agent      Vision Model     PDF Parser    Whisper STT
 
----
+      └───────────────┴───────────────┬───────────────┘
+                                      │
+                                      ▼
 
-# 🎬 Demo
+                              Conversation Memory
+                                      │
+                                      ▼
 
-## 💬 AI Chat
+                              Google Docs Logger
+                                      │
+                                      ▼
 
-<img src="screenshots/chat.png" width="100%">
-
-Ask programming, automation, writing, research, or general knowledge questions directly from Telegram.
-
----
-
-## 🖼 Image Analysis
-
-<img src="screenshots/image-analysis.png" width="100%">
-
-Analyze screenshots, workflow diagrams, charts, documents, or user interface designs.
-
----
-
-## 📄 PDF Analysis
-
-<img src="screenshots/pdf-analysis.png" width="100%">
-
-Upload a PDF and ask questions, generate summaries, or extract important information.
-
----
-
-## 🎤 Voice Assistant
-
-<img src="screenshots/voice-message.png" width="100%">
-
-Send a voice message and receive an AI-generated response after automatic transcription.
-
----
-
-# 🏗 Architecture
-
-```mermaid
-flowchart TD
-
-A[Telegram User]
-
-A --> B(Telegram Trigger)
-
-B --> C{Message Type}
-
-C -->|Text| D[AI Agent]
-
-C -->|Image| E[Vision Analysis]
-
-C -->|PDF| F[PDF Extraction]
-
-C -->|Voice| G[Whisper Transcription]
-
-E --> D
-F --> D
-G --> D
-
-D --> H[Large Language Model]
-
-H --> I[Google Docs Logging]
-
-I --> J[Telegram Reply]
+                               Telegram Response
 ```
 
 ---
 
-# ⚙ Workflow Overview
+# ⚙️ Technology Stack
 
-| Input | Processing | Output |
-|--------|------------|--------|
-| Text | AI Agent | AI Response |
-| Image | Vision Model + AI | Image Explanation |
-| PDF | PDF Extraction + AI | Summary / Q&A |
-| Voice | Whisper + AI | Transcription + Response |
+## Workflow Automation
 
----
+* n8n
+* Docker
 
-# 🛠 Tech Stack
+## Artificial Intelligence
 
-| Category | Technology |
-|------------|------------|
-| Workflow Automation | n8n |
-| Messaging Platform | Telegram Bot API |
-| AI Models | GPT, Qwen, Mistral |
-| AI Providers | Bynara, Groq |
-| Vision | GPT Vision |
-| Speech-to-Text | Whisper Large V3 Turbo |
-| Memory | Buffer Memory |
-| Document Storage | Google Docs |
-| APIs | OpenAI-Compatible API |
-| Deployment | Docker |
+* OpenAI-Compatible LLM
+* Vision Model
+* Groq Whisper (Speech-to-Text)
+
+## Integrations
+
+* Telegram Bot API
+* Google Docs
+
+## Memory
+
+* Buffer Memory
 
 ---
 
-# 📂 Project Structure
+# 📂 Repository Structure
 
 ```text
-rachman-ai/
-
+RACHMAN-AI/
+│
 ├── workflow/
 │   └── RACHMAN AI.json
 │
 ├── screenshots/
-│   ├── cover.png
-│   ├── chat.png
-│   ├── image-analysis.png
-│   ├── pdf-analysis.png
-│   ├── voice-message.png
-│   └── workflow.png
 │
 ├── docs/
-│   ├── installation.md
-│   ├── architecture.md
-│   ├── workflow.md
-│   └── troubleshooting.md
+│
+├── assets/
+│
+├── LICENSE
 │
 └── README.md
 ```
 
 ---
 
-# 🚀 Example Usage
+# 🔄 Workflow Overview
 
-### AI Chat
+The workflow automatically detects the incoming message type and routes it to the appropriate processing pipeline.
+
+## 💬 Text Messages
 
 ```text
-Explain Docker networking.
+Telegram
+    │
+    ▼
+AI Agent
+    │
+Conversation Memory
+    │
+Google Docs Logger
+    │
+Telegram Reply
 ```
 
 ---
 
-### Image Analysis
+## 🖼️ Image Messages
 
 ```text
-Analyze this screenshot.
+Telegram
+    │
+    ▼
+Download Image
+    │
+Vision Analysis
+    │
+Google Docs Logger
+    │
+Telegram Reply
 ```
 
 ---
 
-### PDF Analysis
+## 📄 PDF Documents
 
 ```text
-Summarize this document in five bullet points.
+Telegram
+    │
+    ▼
+Download PDF
+    │
+PDF Parser
+    │
+AI Agent
+    │
+Google Docs Logger
+    │
+Telegram Reply
 ```
 
 ---
 
-### Voice Message
+## 🎤 Voice Messages
 
 ```text
-(Voice Note)
+Telegram
+    │
+    ▼
+Download Voice
+    │
+Groq Whisper
+    │
+AI Agent
+    │
+Google Docs Logger
+    │
+Telegram Reply
 ```
 
 ---
 
-### Programming
+# 🧠 AI Components
 
-```text
-Create an n8n workflow for Telegram automation.
-```
-
----
-
-### Workflow Review
-
-```text
-Review my workflow and suggest improvements.
-```
+| Component          | Purpose                            |
+| ------------------ | ---------------------------------- |
+| AI Agent           | General conversation and reasoning |
+| Vision Model       | Image understanding                |
+| Groq Whisper       | Speech-to-text transcription       |
+| Buffer Memory      | Maintain conversation context      |
+| Google Docs Logger | Store conversation history         |
 
 ---
 
-# 🚀 Installation
+# 📥 Supported Inputs
 
-## Requirements
+| Input Type              | Supported |
+| ----------------------- | :-------: |
+| Text Messages           |     ✅     |
+| Images                  |     ✅     |
+| PDF Documents           |     ✅     |
+| Voice Messages          |     ✅     |
+| Multi-turn Conversation |     ✅     |
 
-- n8n
-- Telegram Bot Token
-- OpenAI-Compatible API Key
-- Google Workspace Credentials
+---
 
-## Setup
+# 📤 Outputs
 
-1. Clone this repository.
+Depending on the input, the bot can:
+
+* Answer general questions
+* Explain uploaded images
+* Summarize PDF documents
+* Answer questions about PDF content
+* Convert speech into text
+* Continue contextual conversations
+* Store conversation history automatically
+
+---
+
+# 🚀 Getting Started
+
+## Prerequisites
+
+Before running the workflow, prepare the following:
+
+* Docker
+* n8n
+* Telegram Bot Token
+* OpenAI-Compatible API Key
+* Groq API Key (Whisper)
+* Google Cloud OAuth Credentials
+* Google Docs access
+
+---
+
+## Installation
+
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/subhanaristiadi/ai-productivity-automation-suite.git
+git clone https://github.com/yourusername/RACHMAN-AI.git
 ```
 
-2. Import the workflow into n8n.
+### 2. Start n8n
 
-3. Configure credentials:
+```bash
+docker compose up -d
+```
 
-- Telegram
-- AI Provider
-- Google Docs
+### 3. Import the workflow
 
-4. Activate the workflow.
+Import the `RACHMAN AI.json` workflow into n8n.
 
-5. Start chatting with your Telegram bot.
+### 4. Configure credentials
 
----
+Configure the required credentials:
 
-# 📸 Screenshot Checklist
+* Telegram
+* AI Provider
+* Groq
+* Google OAuth
 
-After completing the project, add the following screenshots.
+### 5. Activate the workflow
 
-- [ ] Complete n8n Workflow
-- [ ] Telegram Chat
-- [ ] Image Analysis
-- [ ] PDF Analysis
-- [ ] Voice Transcription
-- [ ] Google Docs Logging
+Enable the workflow in n8n and start chatting with your Telegram bot.
 
 ---
 
-# 🛣 Roadmap
+# 🔐 Required Credentials
 
-- [ ] OCR Support
-- [ ] Image Generation
-- [ ] Web Search
-- [ ] RAG Knowledge Base
-- [ ] Google Drive Search
-- [ ] Gmail Integration
-- [ ] Calendar Integration
-- [ ] Vector Database
-- [ ] Long-term Memory
-- [ ] Streaming Responses
-- [ ] Multi-user Support
-- [ ] User Profiles
-- [ ] Authentication
-- [ ] Analytics Dashboard
-- [ ] Plugin System
+| Service          | Purpose                   |
+| ---------------- | ------------------------- |
+| Telegram Bot API | Receive and send messages |
+| AI Provider      | Chat and reasoning        |
+| Groq API         | Speech transcription      |
+| Google OAuth     | Google Docs integration   |
 
 ---
 
-# 👨‍💻 Author
+# 📚 Conversation Logging
 
-**Subhan Aristiadi Rachman**
+Every interaction is automatically stored in Google Docs.
 
-Data Analyst • AI Automation Developer
+Each log includes:
 
-GitHub:
-https://github.com/subhanaristiadi
+* Timestamp
+* User message
+* AI response
+
+This provides a searchable conversation history for future reference.
+
+---
+
+# 📸 Screenshots
+
+Recommended screenshots to include:
+
+* Telegram conversation
+* n8n workflow
+* Image analysis example
+* PDF analysis example
+* Voice transcription example
+* Google Docs conversation log
+
+---
+
+# 🛣️ Roadmap
+
+* [ ] Streaming responses
+* [ ] OCR improvements
+* [ ] Multi-user support
+* [ ] Long-term memory
+* [ ] Retrieval-Augmented Generation (RAG)
+* [ ] Vector database integration
+* [ ] Web dashboard
+* [ ] Function calling
+* [ ] Knowledge base support
+
+---
+
+# 🤝 Contributing
+
+Contributions, suggestions, and feature requests are welcome.
+
+If you have ideas for improving the workflow or adding new capabilities, feel free to open an issue or submit a pull request.
 
 ---
 
 # 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**.
+
+---
+
+# 👤 Author
+
+**Subhan Rachman**
+
+AI Automation • Workflow Automation • Data Analytics • Open Source
+
+If you found this project useful, consider giving it a ⭐ on GitHub.
